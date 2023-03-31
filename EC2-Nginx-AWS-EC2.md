@@ -57,8 +57,7 @@ This helps store things like domain name, API names, and more in a single place,
 Now here we are only defining a few variables to keep it simple.
 <br>
 
-```terraform
-
+```
 variable "defaultTagName" {
   type = string
   default = "Development"
@@ -76,7 +75,6 @@ variable "instance_name" {
     default = "EC2Demo"
     description = "Name of our EC2 instance that we are going to confiugre"
 }
-
 ```
 
 Let's start with configuring our security groups
