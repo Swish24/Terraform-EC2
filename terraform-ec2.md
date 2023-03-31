@@ -15,7 +15,7 @@ Please note:
 This article assumes you have configured AWS CLI credentials on your local machine.
 
 If you are looking to dive right in with the completed project files, they are available <a href="https://github.com/Swish24/Terraform-EC2">here on github</a>
-
+<br>
 First, we are going to create a new file called <a href="https://github.com/Swish24/Terraform-EC2/blob/main/Providers.tf" target="_blank">Providers.tf</a>
 <br>
 Within here we are going to configure the <a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs" target="_blank"> AWS Terraform provider</a>, this will allow us to interact with the AWS API's
