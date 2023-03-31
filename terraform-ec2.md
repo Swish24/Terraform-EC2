@@ -2,9 +2,9 @@
 title: Deploy an EC2 nginx Web Server on AWS using Terraform
 subtitle: Deploy an EC2 nginx Web Server on AWS using Terraform
 slug: deploy-ec2-nginx-webserver-using-terraform
-tags: aws, terraform, devops
+tags: aws, terraform, devops, cloud, automation
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1649662225945/7f_c6UxhR.jpg?auto=compress
-domain: blog.dvsn.ai
+domain: blog.dvsn.a
 publishAs: dvsn
 ---
 
@@ -12,9 +12,9 @@ Terraform is an open-source infrastructure as code tool that allows you to autom
 Today we are going to focus on EC2 instances, Security groups, and Application load balancers.
 
 Please note:
-This article assumes you have configured your AWS CLI credentials on your local machine.
+This article assumes you have configured AWS CLI credentials on your local machine.
 
-If looking to dive right in with the completed project files, they are available <a href="https://github.com/Swish24/Terraform-EC2">here on github</a>
+If you are looking to dive right in with the completed project files, they are available <a href="https://github.com/Swish24/Terraform-EC2">here on github</a>
 
 First, we are going to create a new file called <a href="https://github.com/Swish24/Terraform-EC2/blob/main/Providers.tf" target="_blank">Providers.tf</a>
 <br>
