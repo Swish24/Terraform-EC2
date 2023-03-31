@@ -49,8 +49,8 @@ provider "aws" {
 We are also going to configure our default_tags, we will reference this in a later mentioned variables.tf file. 
 <br>
 
-<h2>Variables File</h2>
-Here is our <a href="https://github.com/Swish24/Terraform-EC2/blob/main/Variables.tf" target="_blank">Variables.tf</a> file, within here we will store the values that we are going to be using.
+<h2><a href="https://github.com/Swish24/Terraform-EC2/blob/main/Variables.tf" target="_blank">Variables.tf</a></h2>
+Here is our variables file, within here we will store the values that we are going to be using.
 <br>
 This helps store things like domain name, API names, and more in a single place, while referencing it later within code.
 <br>
@@ -80,7 +80,7 @@ variable "instance_name" {
 Let's start with configuring our security groups
 
 
-<h2>SecurityGroups.tf</h2>
+<h2><a href="https://github.com/Swish24/Terraform-EC2/blob/main/SecurityGroups.tf" target="_blank">SecurityGroups.tf</a></h2>
 
 Security groups define how we allow traffic in and out of our AWS resources, at the resource level.
 <br>
