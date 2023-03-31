@@ -273,12 +273,12 @@ resource "aws_lb" "load_balancer" {
 ```
 
 At this point, we have all the files together, you should have all these files created within your project
-![Terraform file structure](https://github.com/Swish24/Terraform-EC2/blob/main/images/filestructure.png)
+![Terraform file structure](https://github.com/Swish24/Terraform-EC2/raw/main/images/filestructure.png)
 <br> 
 <br>
 Let's run a terraform init, to initalize our terraform deployment, you should receive this output
 
-![Terraform Init](https://github.com/Swish24/Terraform-EC2/blob/main/images/terraforminit.png) 
+![Terraform Init](https://github.com/Swish24/Terraform-EC2/raw/main/images/terraforminit.png) 
 
 Great, now our terraform enviornment is initialized and ready for use!
 
@@ -288,7 +288,7 @@ Let's run a terraform plan to have terraform briefly check and confirm our confi
 terraform plan
 
 ```
-![Terraform Plan](https://github.com/Swish24/Terraform-EC2/blob/main/images/terraformplan.png) 
+![Terraform Plan](https://github.com/Swish24/Terraform-EC2/raw/main/images/terraformplan.png) 
 
 This will display all of the changes that will be made to the enviornment. As your deployment grows, you will be changing and destroying objects. 
 Keep close aware to these indicators unless you are intending to delete specific resources.
@@ -300,11 +300,11 @@ terraform apply
 ```
 Terraform will now display the same results as the plan, and require you to confirm the changes by entering "yes".
 
-![Terraform Plan](https://github.com/Swish24/Terraform-EC2/blob/main/images/terraformapply.png) 
+![Terraform Plan](https://github.com/Swish24/Terraform-EC2/raw/main/images/terraformapply.png) 
 
 Great, our EC2 instance, four security groups , load balancer, and target groups have been created with terraform!
 
-![Terraform Successfully Delpoyed](https://github.com/Swish24/Terraform-EC2/blob/main/images/terraformcomplete.png) 
+![Terraform Successfully Delpoyed](https://github.com/Swish24/Terraform-EC2/raw/main/images/terraformcomplete.png) 
 
 
 Let's head to our instance within the console, confirm the successul deployment, and that our user data executed successfully.
@@ -312,21 +312,21 @@ Let's head to our instance within the console, confirm the successul deployment,
 <a href="https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:instanceState=running" target="_blank">EC2 Console <a>
 Here within the console we can see our instance has successfully deployed and is online
 
-![EC2 Instance Deployed](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2instancedeployed.png) 
+![EC2 Instance Deployed](https://github.com/Swish24/Terraform-EC2/raw/main/images/ec2instancedeployed.png) 
 
 Let's connect to the instance via the AWS console EC2 Instance connect, this will allow us console access to our instance.
 Select your instance and click connect
 
-![Connect to EC2 Instance](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2instanceconnect.png) 
+![Connect to EC2 Instance](https://github.com/Swish24/Terraform-EC2/raw/main/images/ec2instanceconnect.png) 
 
 Ensure you select "EC2 Instance Connect" & Select connect.
 The ec2-user is the default used user with Amazon Linux AMI's.
 
-![EC2 Instance Connect](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2instanceconnect2.png) 
+![EC2 Instance Connect](https://github.com/Swish24/Terraform-EC2/raw/main/images/ec2instanceconnect2.png) 
 
 Now, we are connected to our instance 
 Let's enter "docker ps -a" and hit enter.
-![EC2 Docker Running](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2dockerrunning.png)
+![EC2 Docker Running](https://github.com/Swish24/Terraform-EC2/raw/main/images/ec2dockerrunning.png)
 
 This will output our running docker containers, and we can see the nginx container we deployed within our EC2 user-data config was successful.
 
@@ -334,7 +334,7 @@ Let's check our webserver within our browser.
 <br>
 Grab your EC2_instance_public_dns that was output during our terraform apply, and paste the url within your browser.
 <br>
-![EC2 Webserver Offline](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2InstanceOffline.png) 
+![EC2 Webserver Offline](https://github.com/Swish24/Terraform-EC2/raw/main/images/ec2InstanceOffline.png) 
 
 As expected, we are not able to connect to the ec2_instance_public_dns. This is by design as we do not want any connections directly to our instance.
 <br>
