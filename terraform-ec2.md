@@ -14,9 +14,9 @@ Today we are going to focus on EC2 instances, Security groups, and Application l
 Please note:
 This article assumes you have configured your AWS CLI credentials on your local machine.
 
-If looking to dive right in with the completed project files, they are available <a href="">here on github</a>
+If looking to dive right in with the completed project files, they are available <a href="https://github.com/Swish24/Terraform-EC2">here on github</a>
 
-First, we are going to create a new file called <a href="" target="_blank">Providers.tf</a>
+First, we are going to create a new file called <a href="https://github.com/Swish24/Terraform-EC2/blob/main/Providers.tf" target="_blank">Providers.tf</a>
 <br>
 Within here we are going to configure the <a href="https://registry.terraform.io/providers/hashicorp/aws/latest/docs" target="_blank"> AWS Terraform provider</a>, this will allow us to interact with the AWS API's
 
@@ -92,9 +92,9 @@ There are many additional layers behind the scenes such as NACL's, VPC's, Intern
 <br>
 Security groups can be attached to many different AWS services, for now, we are going to be focusing on EC2 Instances & Load Balancers.
 
-Within <a href="SecurityGroups.tf">Security Groups.tf</a> we will configure all of our desired security groups to easily locate them.
+Within Security Groups.tf we will configure all of our desired security groups to easily locate them.
 <br>
-<i>Due to the length of this policy, you'll want to grab it from github here: <a href="SecurityGroups.tf" target="_blank">SecurityGroups.tf</a></i>
+<i>Due to the length of this policy, you'll want to grab it from github here: <a href="https://github.com/Swish24/Terraform-EC2/blob/main/SecurityGroups.tf" target="_blank">SecurityGroups.tf</a></i>
 
 Here is a snippet of the policiy,
 
@@ -121,7 +121,7 @@ resource "aws_security_group" "Safe_Secure_Inbound" {
 
 We are going to define our data source to select our desired AMI for our EC2 Instance
 <br>
-<i>Due to the length of this file, please grab the full code here: <a href="SecurityGroups.tf" target="_blank">EC2.tf</a></i>
+<i>Due to the length of this file, please grab the full code here: <a href="https://github.com/Swish24/Terraform-EC2/blob/main/EC2.tf" target="_blank">EC2.tf</a></i>
 
 ```terraform
 //Define the AMI that we will use in our instance configuration
@@ -241,7 +241,7 @@ Last but not least, we have our load balancers. Within this file we will create 
 <br>
 Create a new file named "LoadBalancer.tf"
 <br>
-<i>Due to the length of this file, please grab the full code here: <a href="LoadBalancer.tf" target="_blank">LoadBalancer.tf</a></i>
+<i>Due to the length of this file, please grab the full code here: <a href="https://github.com/Swish24/Terraform-EC2/blob/main/LoadBalancer.tf" target="_blank">LoadBalancer.tf</a></i>
 
 <br>
 
@@ -272,12 +272,12 @@ resource "aws_lb" "load_balancer" {
 ```
 
 At this point, we have all the files together, you should have all these files created within your project
-![Terraform file structure](images/filestructure.png)
+![Terraform file structure](https://github.com/Swish24/Terraform-EC2/blob/main/images/filestructure.png)
 <br> 
 <br>
 Let's run a terraform init, to initalize our terraform deployment, you should receive this output
 
-![Terraform Init](images/terraforminit.png) 
+![Terraform Init](https://github.com/Swish24/Terraform-EC2/blob/main/images/terraforminit.png) 
 
 Great, now our terraform enviornment is initialized and ready for use!
 
@@ -287,7 +287,7 @@ Let's run a terraform plan to have terraform briefly check and confirm our confi
 terraform plan
 
 ```
-![Terraform Plan](images/terraformplan.png) 
+![Terraform Plan](https://github.com/Swish24/Terraform-EC2/blob/main/images/terraformplan.png) 
 
 This will display all of the changes that will be made to the enviornment. As your deployment grows, you will be changing and destroying objects. 
 Keep close aware to these indicators unless you are intending to delete specific resources.
@@ -299,11 +299,11 @@ terraform apply
 ```
 Terraform will now display the same results as the plan, and require you to confirm the changes by entering "yes".
 
-![Terraform Plan](images/terraformapply.png) 
+![Terraform Plan](https://github.com/Swish24/Terraform-EC2/blob/main/images/terraformapply.png) 
 
 Great, our EC2 instance, four security groups , load balancer, and target groups have been created with terraform!
 
-![Terraform Successfully Delpoyed](images/terraformcomplete.png) 
+![Terraform Successfully Delpoyed](https://github.com/Swish24/Terraform-EC2/blob/main/images/terraformcomplete.png) 
 
 
 Let's head to our instance within the console, confirm the successul deployment, and that our user data executed successfully.
@@ -311,21 +311,21 @@ Let's head to our instance within the console, confirm the successul deployment,
 <a href="https://us-east-1.console.aws.amazon.com/ec2/home?region=us-east-1#Instances:instanceState=running" target="_blank">EC2 Console <a>
 Here within the console we can see our instance has successfully deployed and is online
 
-![EC2 Instance Deployed](images/ec2instancedeployed.png) 
+![EC2 Instance Deployed](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2instancedeployed.png) 
 
 Let's connect to the instance via the AWS console EC2 Instance connect, this will allow us console access to our instance.
 Select your instance and click connect
 
-![Connect to EC2 Instance](images/ec2instanceconnect.png) 
+![Connect to EC2 Instance](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2instanceconnect.png) 
 
 Ensure you select "EC2 Instance Connect" & Select connect.
 The ec2-user is the default used user with Amazon Linux AMI's.
 
-![EC2 Instance Connect](images/ec2instanceconnect2.png) 
+![EC2 Instance Connect](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2instanceconnect2.png) 
 
 Now, we are connected to our instance 
 Let's enter "docker ps -a" and hit enter.
-![EC2 Docker Running](images/ec2dockerrunning.png)
+![EC2 Docker Running](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2dockerrunning.png)
 
 This will output our running docker containers, and we can see the nginx container we deployed within our EC2 user-data config was successful.
 
@@ -333,7 +333,7 @@ Let's check our webserver within our browser.
 <br>
 Grab your EC2_instance_public_dns that was output during our terraform apply, and paste the url within your browser.
 <br>
-![EC2 Webserver Offline](images/ec2InstanceOffline.png) 
+![EC2 Webserver Offline](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2InstanceOffline.png) 
 
 As expected, we are not able to connect to the ec2_instance_public_dns. This is by design as we do not want any connections directly to our instance.
 <br>
@@ -343,7 +343,7 @@ Now grab the "lb_public_dns" that was output during our terraform apply.
 
 As expected, we can now access our website, as we are connecting through the load balancer
 
-![Successful EC2 Webserver](images/ec2InstanceOnline.png) 
+![Successful EC2 Webserver](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2InstanceOnline.png) 
 
 
 Here we have succesfully deployed an EC2 instance, with a load balancer in front to handle traffic.
