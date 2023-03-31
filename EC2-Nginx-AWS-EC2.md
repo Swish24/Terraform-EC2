@@ -13,9 +13,11 @@ Terraform is an open-source infrastructure as code tool that allows you to autom
 Today we are going to focus on EC2 instances, Security groups, and Application load balancers.
 
 Please note:
+<br>
 This article assumes you have configured AWS CLI credentials on your local machine.
 
 If you are looking to dive right in with the completed project files, they are available <a href="https://github.com/Swish24/Terraform-EC2">here on github</a>
+<br>
 <br>
 First, we are going to create a new file called <a href="https://github.com/Swish24/Terraform-EC2/blob/main/Providers.tf" target="_blank">Providers.tf</a>
 <br>
@@ -47,12 +49,13 @@ provider "aws" {
 We are also going to configure our default_tags, we will reference this in a later mentioned variables.tf file. 
 <br>
 
-<h2>Variables.tf</h2>
-Here is our Variables.tf file, within here we will store the values that we are going to be using.
+<h2>Variables File</h2>
+Here is our <a href="https://github.com/Swish24/Terraform-EC2/blob/main/Variables.tf" target="_blank">Variables.tf</a> file, within here we will store the values that we are going to be using.
 <br>
 This helps store things like domain name, API names, and more in a single place, while referencing it later within code.
 <br>
 Now here we are only defining a few variables to keep it simple.
+<br>
 
 ```terraform
 
