@@ -57,7 +57,7 @@ This helps store things like domain name, API names, and more in a single place,
 Now here we are only defining a few variables to keep it simple.
 <br>
 
-```hcl
+```terraform
 variable "defaultTagName" {
   type = string
   default = "Development"
