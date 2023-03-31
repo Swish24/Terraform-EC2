@@ -1,6 +1,6 @@
 ---
-title: Deploy an EC2 nginx Web Server on AWS using Terraform
-subtitle: Deploy an EC2 nginx Web Server on AWS using Terraform
+title: Deploy an EC2 Nginx Web Server on AWS using Terraform
+subtitle: Deploy an EC2 Nginx Web Server on AWS using Terraform
 slug: deploy-ec2-nginx-webserver-using-terraform
 tags: aws, terraform, devops, cloud, automation
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1649662225945/7f_c6UxhR.jpg?auto=compress
@@ -145,7 +145,7 @@ This is helpful because maybe you want to use an AMI updated to a specific date.
 
 To get the list of AMI's, you can use this CLI command <a href="https://awscli.amazonaws.com/v2/documentation/api/latest/reference/ec2/describe-images.html" target="_blank">AWS CLI</a>
 
-```
+```terraform
 aws ec2 describe-images --owners amazon --region us-west-1 --filters "Name=name,Values=*l2023-ami-2023.0.*" --query 'Images[*].[Name]' --output text
 ```
 
@@ -237,10 +237,10 @@ docker run -d \
 lscr.io/linuxserver/nginx:latest
 ```
 
-<h2>Load Balancer.tf</h2>
+<h2>LoadBalancer.tf</h2>
 Last but not least, we have our load balancers. Within this file we will create our Application load balancer, load balancer listeners, and instance target group.
 <br>
-Create a new file named "LoadBalancer.tf"
+Create a new file named LoadBalancer.tf
 <br>
 <i>Due to the length of this file, please grab the full code here: <a href="https://github.com/Swish24/Terraform-EC2/blob/main/LoadBalancer.tf" target="_blank">LoadBalancer.tf</a></i>
 
@@ -344,7 +344,7 @@ Now grab the "lb_public_dns" that was output during our terraform apply.
 
 As expected, we can now access our website, as we are connecting through the load balancer
 
-![Successful EC2 Webserver](https://github.com/Swish24/Terraform-EC2/blob/main/images/ec2InstanceOnline.png) 
+![Successful EC2 Webserver](https://github.com/Swish24/Terraform-EC2/raw/main/images/ec2InstanceOnline.png) 
 
 
 Here we have succesfully deployed an EC2 instance, with a load balancer in front to handle traffic.
