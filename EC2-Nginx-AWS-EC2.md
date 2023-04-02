@@ -55,10 +55,8 @@ Here is our variables file, within here we will store the values that we are goi
 This helps store things like domain name, API names, and more in a single place, while referencing it later within code.
 <br>
 Now here we are only defining a few variables to keep it simple.
-<br>
 
 ```terraform
-
 variable "defaultTagName" {
   type = string
   default = "Development"
