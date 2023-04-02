@@ -6,7 +6,7 @@ tags: aws, terraform, devops, cloud, automation
 cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1649662225945/7f_c6UxhR.jpg?auto=compress
 domain: blog.dvsn.ai
 publishAs: dvsn
-hideFromHashnodecommunity: true
+hideFromHashnodecommunity: false
 ---
 
 Terraform is an open-source infrastructure as code tool that allows you to automate the provisioning and configuration of infrastructure resources on AWS, and other Cloud providers. It enables you to define your infrastructure as code and easily manage, version and share your infrastructure configurations on AWS.
