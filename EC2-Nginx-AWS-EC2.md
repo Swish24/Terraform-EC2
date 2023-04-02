@@ -46,7 +46,7 @@ provider "aws" {
 }
 ```
 
-We are also going to configure our default_tags, we will reference this in a later mentioned variables.tf file. 
+We are also going to configure our default_tags, we will reference this in a later mentioned variables file. 
 <br>
 
 <h2><a href="https://github.com/Swish24/Terraform-EC2/blob/main/Variables.tf" target="_blank">Variables.tf</a></h2>
