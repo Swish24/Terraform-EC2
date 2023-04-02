@@ -83,7 +83,7 @@ Let's start with configuring our security groups
 
 Security groups define how we allow traffic in and out of our AWS resources, at the resource level.
 <br>
-Create a new file named SecurityGroups.tf
+Create a new file named <a href="https://github.com/Swish24/Terraform-EC2/blob/main/SecurityGroups.tf" target="_blank">SecurityGroups.tf</a></h2>
 <br>
 This will contain the configuration of all of our security groups
 <br>
