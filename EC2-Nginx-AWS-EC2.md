@@ -57,7 +57,8 @@ This helps store things like domain name, API names, and more in a single place,
 Now here we are only defining a few variables to keep it simple.
 <br>
 
-```
+```terraform
+
 variable "defaultTagName" {
   type = string
   default = "Development"
@@ -84,7 +85,7 @@ Let's start with configuring our security groups
 
 Security groups define how we allow traffic in and out of our AWS resources, at the resource level.
 <br>
-Create a new file named "SecurityGroups.tf"
+Create a new file named SecurityGroups.tf
 <br>
 This will contain the configuration of all of our security groups
 <br>
@@ -96,7 +97,7 @@ There are many additional layers behind the scenes such as NACL's, VPC's, Intern
 <br>
 Security groups can be attached to many different AWS services, for now, we are going to be focusing on EC2 Instances & Load Balancers.
 
-Within Security Groups.tf we will configure all of our desired security groups to easily locate them.
+Within the security groups file we will configure all of our desired security groups & rules to easily locate them.
 <br>
 <i>Due to the length of this policy, you'll want to grab it from github here: <a href="https://github.com/Swish24/Terraform-EC2/blob/main/SecurityGroups.tf" target="_blank">SecurityGroups.tf</a></i>
 
@@ -121,7 +122,7 @@ resource "aws_security_group" "Safe_Secure_Inbound" {
 }
 ```
 
-<h2>EC2.tf</h2>
+<h2><a href="https://github.com/Swish24/Terraform-EC2/blob/main/EC2.tf" target="_blank">EC2.tf</a></h2>
 
 We are going to define our data source to select our desired AMI for our EC2 Instance
 <br>
