@@ -39,7 +39,7 @@ provider "aws" {
 
   default_tags {
     tags = {
-      Environment = "{$var.defaultTagName}"
+      Environment = "{$var.defaultEnviornmentName}"
       Owner       = "{$var.defaultTagOwner}"
     }
   }
@@ -57,7 +57,7 @@ This helps store things like domain name, API names, and more in a single place,
 Now here we are only defining a few variables to keep it simple.
 
 ```terraform
-variable "defaultTagName" {
+variable "defaultEnviornmentName" {
   type = string
   default = "Development"
   description = "The default supplied development envionrment name"
